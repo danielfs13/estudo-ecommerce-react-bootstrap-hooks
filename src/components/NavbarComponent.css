@@ -1,0 +1,10 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  margin-top: 5vh;
+}
+
+.box {
+  margin-bottom: 5vh;
+}
