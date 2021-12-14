@@ -7,6 +7,7 @@ function ProductsCardsComponent(props) {
   const { setCartItems } = props;
 
   const RenderCard = (card, index) => {
+    console.log(cartItems);
     return (
       <div>
         <Card style={{ width: "18rem" }} key={card.id} className="box">
@@ -17,7 +18,10 @@ function ProductsCardsComponent(props) {
               {card.text}
               <br /> R${card.valor}
             </Card.Text>
-            <Button onClick={() => setCartItems(card.valor)} variant="primary">
+            <Button
+              onClick={() => setCartItems(parseFloat(cartItems) + card.valor)}
+              variant="primary"
+            >
               Adicionar ao Carrinho
             </Button>
           </Card.Body>

@@ -9,7 +9,7 @@ function ShopingCartComponent(props) {
       <Card className="text-center">
         <Card.Header>Meu Carrinho</Card.Header>
         <Card.Body>
-          <Card.Title>Valor Total</Card.Title>
+          <Card.Title>R${cartItems}</Card.Title>
           <Card.Text>
             {cartItems.length === 1 && <div>Carrinho vazio!</div>}
           </Card.Text>
