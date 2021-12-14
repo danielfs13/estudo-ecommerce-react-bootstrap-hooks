@@ -9,6 +9,7 @@ import {
   Offcanvas,
   Container,
 } from "react-bootstrap";
+import "./NavbarComponent.css";
 
 const NavbarComponent = () => {
   return (

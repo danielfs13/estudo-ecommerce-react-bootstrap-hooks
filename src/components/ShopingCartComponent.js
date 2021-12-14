@@ -1,7 +1,9 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 
-const ShopingCartComponent = () => {
+function ShopingCartComponent(props) {
+  const { cartItems } = props;
+
   return (
     <div>
       <Card className="text-center">
@@ -9,15 +11,14 @@ const ShopingCartComponent = () => {
         <Card.Body>
           <Card.Title>Valor Total</Card.Title>
           <Card.Text>
-            With supporting text below as a natural lead-in to additional
-            content.
+            {cartItems.length === 1 && <div>Carrinho vazio!</div>}
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button variant="primary">Pagar</Button>
         </Card.Body>
         <Card.Footer className="text-muted">2 days ago</Card.Footer>
       </Card>
     </div>
   );
-};
+}
 
 export default ShopingCartComponent;
